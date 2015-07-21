@@ -20,7 +20,7 @@ You need download our modified iDT feature code and compile it by yourself. [Imp
 - Step 2: TVL1 Optical Flow Extraction </br>
 You need download our dense flow code and compile it by yourself. [Dense Flow](https://github.com/wanglimin/dense_flow)
 - Step 3: Mat Caffe  </br>
-You need download the public caffe toolbox. [Caffe](https://github.com/BVLC/caffe)
+You need download the public caffe toolbox. Our TDD code is compatatible with previous version of [Caffe](https://github.com/wanglimin/caffe)
 - Step 4: TDD Extraction </br>
 Now you can run the matlab file "script_demo.m" to extract TDD features.
 
