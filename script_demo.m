@@ -1,4 +1,4 @@
-% a demon code for TDD extraction
+% a demo code for TDD extraction
 
 vid_name = 'test.avi';
 
