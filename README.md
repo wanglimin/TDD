@@ -12,7 +12,7 @@ First, we provide our trained two-stream CNN models on the split1 of UCF101 data
 ["Temporal net model"](http://mmlab.siat.ac.cn/tdd/temporal.caffemodel) </br>
 ["Temporal net prototxt"](http://mmlab.siat.ac.cn/tdd/temporal_cls.prototxt)
 
-#### TDD demon code
+#### TDD demo code
 Here, a matlab demon code for TDD extraction is released.
 
 - Step 1: Improved Trajectory Extraction </br>
