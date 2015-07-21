@@ -3,13 +3,13 @@
 vid_name = 'test.avi';
 
 % idt extraction
-% display('Extract improved trajectories...');
-% system(['./DenseTrackStab -f ',vid_name,' -o ',vid_name(1:end-4),'.bin']);
+display('Extract improved trajectories...');
+system(['./DenseTrackStab -f ',vid_name,' -o ',vid_name(1:end-4),'.bin']);
 
 % TVL1 flow extraction
-% display('Extract TVL1 optical flow field...');
-% mkdir test/
-% system(['./dense_flow -f ',vid_name,' -x test/flow_x -y test/flow_y -b 20 -t 1 -d 3']);
+display('Extract TVL1 optical flow field...');
+mkdir test/
+system(['./dense_flow -f ',vid_name,' -x test/flow_x -y test/flow_y -b 20 -t 1 -d 3']);
 
 % Import improved trajectories
 IDT = import_idt('test.bin',15);
