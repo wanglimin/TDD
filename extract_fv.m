@@ -25,98 +25,100 @@ foldername = {folderlist(:).name};
 foldername = setdiff(foldername,{'.','..'});
 
 for i = index
-%     if ~exist([path6,foldername{i}],'dir')
-%         mkdir([path6,foldername{i}]);
-% 	end
-	if ~exist([path7,foldername{i}],'dir')
+    %     if ~exist([path6,foldername{i}],'dir')
+    %         mkdir([path6,foldername{i}]);
+    % 	end
+    if ~exist([path7,foldername{i}],'dir')
         mkdir([path7,foldername{i}]);
-	end
-	if ~exist([path8,foldername{i}],'dir')
+    end
+    if ~exist([path8,foldername{i}],'dir')
         mkdir([path8,foldername{i}]);
-	end
-	if ~exist([path9,foldername{i}],'dir')
+    end
+    if ~exist([path9,foldername{i}],'dir')
         mkdir([path9,foldername{i}]);
-	end
-	if ~exist([path10,foldername{i}],'dir')
+    end
+    if ~exist([path10,foldername{i}],'dir')
         mkdir([path10,foldername{i}]);
-	end
-	
+    end
+    
     filelist = dir([path3,foldername{i},'/*.mat']);
-	tic;
+    tic;
     for j = 1:length(filelist)
-		
-%       feature = load([path1,foldername{i},'/',filelist(j).name]);
-% 		feature = double(feature.idt_cnn_feature.^power);
-% 		 
-%         if ~isempty(feature)
-%             feature = bsxfun(@minus,feature,PCA.mu);
-%             feature = PCA.U(:,1:dim1)'*feature;
-%             feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
-%             coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
-% 		else
-% 			
-%             coding = zeros(1,2*num*dim1);
-% 		end
-% 		save([path6,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
-		
-		feature = load([path2,foldername{i},'/',filelist(j).name]);
-		feature = double(feature.idt_cnn_feature.^power);
-		 
-        if ~isempty(feature)
-            feature = bsxfun(@minus,feature,PCA.mu);
-            feature = PCA.U(:,1:dim1)'*feature;
-            feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
-            coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
-		else
-			
-            coding = zeros(1,2*num*dim1);
-		end
-		save([path7,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
-		
-		feature = load([path3,foldername{i},'/',filelist(j).name]);
-		feature = double(feature.idt_cnn_feature.^power);
-		 
-        if ~isempty(feature)
-            feature = bsxfun(@minus,feature,PCA.mu);
-            feature = PCA.U(:,1:dim1)'*feature;
-            feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
-            coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
-		else
-			
-            coding = zeros(1,2*num*dim1);
-		end
-		save([path8,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
-		
-		feature = load([path4,foldername{i},'/',filelist(j).name]);
-		feature = double(feature.idt_cnn_feature.^power);
-		 
-        if ~isempty(feature)
-            feature = bsxfun(@minus,feature,PCA.mu);
-            feature = PCA.U(:,1:dim1)'*feature;
-            feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
-            coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
-		else
-			
-            coding = zeros(1,2*num*dim1);
-		end
-		save([path9,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
-		
-		feature = load([path5,foldername{i},'/',filelist(j).name]);
-		feature = double(feature.idt_cnn_feature.^power);
-		 
-        if ~isempty(feature)
-            feature = bsxfun(@minus,feature,PCA.mu);
-            feature = PCA.U(:,1:dim1)'*feature;
-            feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
-            coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
-		else
-	
-            coding = zeros(1,2*num*dim1);
-		end
-		save([path10,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
-		
-	end
-	toc;
+        if ~exist([path10,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'file')
+            
+            %       feature = load([path1,foldername{i},'/',filelist(j).name]);
+            % 		feature = double(feature.idt_cnn_feature.^power);
+            %
+            %         if ~isempty(feature)
+            %             feature = bsxfun(@minus,feature,PCA.mu);
+            %             feature = PCA.U(:,1:dim1)'*feature;
+            %             feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
+            %             coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
+            % 		else
+            %
+            %             coding = zeros(1,2*num*dim1);
+            % 		end
+            % 		save([path6,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
+            
+            feature = load([path2,foldername{i},'/',filelist(j).name]);
+            feature = double(feature.idt_cnn_feature.^power);
+            
+            if ~isempty(feature)
+                feature = bsxfun(@minus,feature,PCA.mu);
+                feature = PCA.U(:,1:dim1)'*feature;
+                feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
+                coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
+            else
+                
+                coding = zeros(1,2*num*dim1);
+            end
+            save([path7,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
+            
+            feature = load([path3,foldername{i},'/',filelist(j).name]);
+            feature = double(feature.idt_cnn_feature.^power);
+            
+            if ~isempty(feature)
+                feature = bsxfun(@minus,feature,PCA.mu);
+                feature = PCA.U(:,1:dim1)'*feature;
+                feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
+                coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
+            else
+                
+                coding = zeros(1,2*num*dim1);
+            end
+            save([path8,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
+            
+            feature = load([path4,foldername{i},'/',filelist(j).name]);
+            feature = double(feature.idt_cnn_feature.^power);
+            
+            if ~isempty(feature)
+                feature = bsxfun(@minus,feature,PCA.mu);
+                feature = PCA.U(:,1:dim1)'*feature;
+                feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
+                coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
+            else
+                
+                coding = zeros(1,2*num*dim1);
+            end
+            save([path9,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
+            
+            feature = load([path5,foldername{i},'/',filelist(j).name]);
+            feature = double(feature.idt_cnn_feature.^power);
+            
+            if ~isempty(feature)
+                feature = bsxfun(@minus,feature,PCA.mu);
+                feature = PCA.U(:,1:dim1)'*feature;
+                feature = bsxfun(@rdivide,feature,sqrt(PCA.vars(1:dim1)));
+                coding = vl_fisher(feature,GMM.means,GMM.covariances,GMM.priors);
+            else
+                
+                coding = zeros(1,2*num*dim1);
+            end
+            save([path10,foldername{i},'/',filelist(j).name(1:end-4),'_pca_',num2str(dim1),'_power_',num2str(power),'.mat'],'coding');
+        end
+        
+    end
+    toc;
 end
 
 end
