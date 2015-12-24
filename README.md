@@ -26,7 +26,9 @@ You need download our modified iDT feature code and compile it by yourself. [Imp
 - Step 2: TVL1 Optical Flow Extraction </br>
 You need download our dense flow code and compile it by yourself. [Dense Flow](https://github.com/wanglimin/dense_flow)
 - Step 3: Mat Caffe  </br>
-You need download the public caffe toolbox. Our TDD code is compatatible with previous version of [Caffe](https://github.com/yjxiong/caffe)
+You need download the public caffe toolbox. Our TDD code is compatatible with the lattest version of [Caffe](https://github.com/yjxiong/caffe). </br>
+Here you need to download the models in new proto format: </br>
+["Spatial net model (v2)"](http://mmlab.siat.ac.cn/tdd/spatial_v2.caffemodel) ["Temporal net model (v2)"](http://mmlab.siat.ac.cn/tdd/temporal_v2.caffemodel) </br>
 - Step 4: TDD Extraction </br>
 Now you can run the matlab file "script_demo.m" to extract TDD features.
 
