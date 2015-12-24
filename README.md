@@ -5,7 +5,7 @@ Here we provide the code for the extraction of Trajectory-Pooled Deep-Convolutio
     Limin Wang, Yu Qiao, and Xiaou Tang, in CVPR, 2015
 ### Updates
 - Dec 24, 2015
-  * Relase TDD (branch: cudnn2.0) compatible with lattest [caffe toolbox](https://github.com/yjxiong/caffe). Due to speedup brought by cudnn2.0 or above, TDD extraction is becommin more efficient.
+  * Relase TDD (branch: cudnn2.0) compatible with lattest [caffe toolbox](https://github.com/yjxiong/caffe). Due to speedup brought by cudnn2.0 or above, TDD extraction is becoming more efficient.
 - Jul 21, 2015
   * First version TDD (branch: master) compatible with an older version of [caffe toolbox](https://github.com/wanglimin/caffe).
 
