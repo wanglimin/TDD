@@ -1,9 +1,9 @@
-name: "VGG_CNN_M_2048"
+name: "temporal_net"
 input: "data"
 input_dim: 40
 input_dim: 20
-input_dim: 120
-input_dim: 160
+input_dim: 480
+input_dim: 640
 layer {
   name: "conv1"
   type: "Convolution"

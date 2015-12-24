@@ -1,4 +1,15 @@
+
 function [feature] = TDD(inf,tra,cnn_feature,scale_x,scale_y,num_cell)
+% TDD: perform trajectory pooling over convolutional feature maps.
+% Input:
+%       inf: information of trajectories from iDTs (10*N)
+%       traj: extracted trajectories (2L*N)
+%       cnn_feature: cnn feature maps (convlutional layers: W*H*C*L)
+%       scale_x: width ratio
+%       scale_y: height ratio
+%       num_cell: the number of cell in temporal dimension
+% Output:
+%       feature: trajectory pooled descriptors ((C*NUM_CELL) *N)
 
 if ~isempty(inf)
 	ind = inf(7,:)==1;
