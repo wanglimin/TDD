@@ -3,6 +3,12 @@ Here we provide the code for the extraction of Trajectory-Pooled Deep-Convolutio
 
     Action Recognition with Trajectory-Pooled Deep-Convolutional Descriptors
     Limin Wang, Yu Qiao, and Xiaou Tang, in CVPR, 2015
+### Updates
+- Dec 24, 2015
+  * Relase TDD (branch: cudnn2.0) compatible with lattest [caffe toolbox](https://github.com/yjxiong/caffe). Due to speedup brought by cudnn2.0 or above, TDD extraction is becommin more efficient.
+- Jul 21, 2015
+  * First version TDD (branch: master) compatible with an older version of [caffe toolbox](https://github.com/wanglimin/caffe).
+
 
 #### Two-stream CNN models trained on the UCF101 dataset
 First, we provide our trained two-stream CNN models on the split1 of UCF101 dataset, which achieve the recognition accuracy of 84.7%
@@ -20,7 +26,7 @@ You need download our modified iDT feature code and compile it by yourself. [Imp
 - Step 2: TVL1 Optical Flow Extraction </br>
 You need download our dense flow code and compile it by yourself. [Dense Flow](https://github.com/wanglimin/dense_flow)
 - Step 3: Mat Caffe  </br>
-You need download the public caffe toolbox. Our TDD code is compatatible with previous version of [Caffe](https://github.com/wanglimin/caffe)
+You need download the public caffe toolbox. Our TDD code is compatatible with previous version of [Caffe](https://github.com/yjxiong/caffe)
 - Step 4: TDD Extraction </br>
 Now you can run the matlab file "script_demo.m" to extract TDD features.
 
