@@ -1,4 +1,4 @@
-# Trajectory-Pooled Deep-Convolutional Descriptors (TDD)
+# Trajectory-Pooled Deep-Convolutional Descriptors
 Here we provide the code for the extraction of Trajectory-Pooled Deep-Convolutional Descriptors (TDD), from the following paper:
 
     Action Recognition with Trajectory-Pooled Deep-Convolutional Descriptors
