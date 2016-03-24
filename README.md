@@ -12,10 +12,10 @@ Here we provide the code for the extraction of Trajectory-Pooled Deep-Convolutio
 ### Two-stream CNN models trained on the UCF101 dataset
 First, we provide our trained two-stream CNN models on the split1 of UCF101 dataset, which achieve the recognition accuracy of 84.7%
 
-["Spatial net model"](http://mmlab.siat.ac.cn/tdd/spatial.caffemodel) </br> 
-["Spatial net prototxt"](http://mmlab.siat.ac.cn/tdd/spatial_cls.prototxt) </br>
-["Temporal net model"](http://mmlab.siat.ac.cn/tdd/temporal.caffemodel) </br>
-["Temporal net prototxt"](http://mmlab.siat.ac.cn/tdd/temporal_cls.prototxt)
+["Spatial net model (v1)"](http://mmlab.siat.ac.cn/tdd/spatial.caffemodel) </br> 
+["Spatial net prototxt (v1)"](http://mmlab.siat.ac.cn/tdd/spatial_cls.prototxt) </br>
+["Temporal net model (v1)"](http://mmlab.siat.ac.cn/tdd/temporal.caffemodel) </br>
+["Temporal net prototxt (v1)"](http://mmlab.siat.ac.cn/tdd/temporal_cls.prototxt)
 
 ### TDD demo code
 Here, a matlab demo code for TDD extraction is provided.
