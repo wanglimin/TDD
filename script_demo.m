@@ -33,7 +33,7 @@ caffe.reset_all();
 caffe.set_mode_gpu();
 caffe.set_device(gpu_id);
 net = caffe.Net(model_def_file, model_file, 'test');
-[feature_conv4, feature_conv5] = SpatialCNNFeature(vid_name, net, sizes_vid(scale,1), sizes_vid(scale,2));
+[feature_conv5, feature_conv4] = SpatialCNNFeature(vid_name, net, sizes_vid(scale,1), sizes_vid(scale,2));
 
 if max(info(1,:)) > size(feature_conv4,4)
     ind =  info(1,:) <= size(feature_conv4,4);
@@ -62,7 +62,7 @@ caffe.set_mode_gpu();
 caffe.set_device(gpu_id);
 net = caffe.Net(model_def_file, model_file, 'test');
 
-[feature_conv3, feature_conv4] = TemporalCNNFeature('test/', net, sizes_vid(scale,1), sizes_vid(scale,2));
+[feature_conv4, feature_conv3] = TemporalCNNFeature('test/', net, sizes_vid(scale,1), sizes_vid(scale,2));
 if max(info(1,:)) > size(feature_conv4,4)
     ind =  info(1,:) <= size(feature_conv4,4);
     info = info(:,ind);
